@@ -1,0 +1,45 @@
+<!--Node Studio Treinamentos - Lógica de Programação - Acessando Matrizes - possibilite ao usuário escolher a quantidade de linhas, colunas e respectivos valores de modo a imprimir em tela os dados 
+escolhidos por meio do alert-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var linhas = prompt("Digite a quantidade de linhas que deseja para a matriz:");
+        var colunas = prompt("Digite a quantidade de colunas que deseja para a matriz:");
+        alert("Criar uma matriz de " + linhas + " linhas por " + colunas + " colunas. ");
+
+        var matriz = [];
+            for (var i = 0; i < linhas; i++) {
+                matriz [i] = [];
+                for (var j = 0; j < colunas; j++) {
+                }
+            }
+        for (var l = 0; l < linhas; l++) {
+            for (var c = 0; c < colunas; c++) {
+                matriz [l][c] = prompt ("Atribua valores de acordo com a quantidade de linhas e colunas escolhidas anteriormente:");
+            }
+        }
+
+        var valores = '';
+        for (var l = 0; l < linhas; l++) {
+            for (var c = 0; c < colunas; c++) {
+                if (c < colunas -1) {
+                    valores += matriz[l][c] + "\t\t";
+                }
+                else {
+                    valores += matriz[l][c] + "\n";
+                }
+            }
+        }
+        alert("Conteúdo da matriz:\n" + valores);
+    </script>
+    
+</body>
+</html>
